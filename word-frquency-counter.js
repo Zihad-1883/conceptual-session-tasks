@@ -26,7 +26,8 @@
 function wordFrequencyCounter(){
 
     let object = {};
-    let words2 = words.split(' ');
+    let wordsWithoutSpace = words.trim();
+    let words2 = wordsWithoutSpace.split(' ');
     for(const word of words2){
         const wordLowerCase = word.toLowerCase();
         if(object.hasOwnProperty(wordLowerCase)){
@@ -41,7 +42,7 @@ function wordFrequencyCounter(){
 }
 
 
-let words =  "I love JS and I love coding and JS is fun Fun FUN FuN";
+let words =  "I love JS and I love coding and JS is fun   ";
 const ans = (wordFrequencyCounter(words));
 console.log(ans);
 
